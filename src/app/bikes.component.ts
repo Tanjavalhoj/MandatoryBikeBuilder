@@ -17,7 +17,7 @@ export class BikesComponent {
   title: string;
   content: string;
 
-  usersCol: AngularFirestoreCollection<Bike>;
+  bikesCol: AngularFirestoreCollection<Bike>;
   bikes: any;
 
   constructor(private afs: AngularFirestore, private _router: Router) {
@@ -25,11 +25,11 @@ export class BikesComponent {
   }
 
   ngOnInit() {
-    this.usersCol = this.afs.collection('users');
-    this.users = this.usersCol.snapshotChanges()
+    this.bikesCol = this.afs.collection('bikes');
+    this.bikes = this.bikesCol.snapshotChanges()
     .map(actions => {
       return actions.map(a => {
-        const data = a.payload.doc.data() as User;
+        const data = a.payload.doc.data() as Bike;
         const id = a.payload.doc.id;
         return { id, data };
       });
@@ -40,9 +40,9 @@ export class BikesComponent {
     this._router.navigate(['add']);
   }
 
-  delete(userId, name) {
+  delete(bikeId, name) {
     if (confirm('Are you sure you want to delete ' + name + '?')) {
-        this.afs.doc('users/' + userId).delete();
+        this.afs.doc('bikes/' + bikeId).delete();
     }
   }
 }
