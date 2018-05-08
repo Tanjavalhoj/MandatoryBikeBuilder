@@ -13,10 +13,10 @@
 	</thead>
 	<tbody>
 		<tr *ngFor="let bike of bikes | async">
-			<td>{{ bike.wheels }}</td>
+			<td>{{ bike.Wheels }}</td>
             <td>{{ bike.Framecolor }}</td>
-            <td>{{ bike.headsetFront }}</td>
-            <td>{{ bike.headsetRear }}</td>
+            <td>{{ bike.FrontHeadset }}</td>
+            <td>{{ bike.RearHeadset }}</td>
 			<td>                
 				<a [routerLink]="['/add', bike.$key]">
                     <i class="glyphicon glyphicon-edit"></i>

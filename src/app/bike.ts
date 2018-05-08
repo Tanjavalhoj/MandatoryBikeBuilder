@@ -1,6 +1,6 @@
 export class Bike {
     Framecolor: string;
-    wheels: string;
-    headsetFront: string;
-    headsetRear: string;
+    Wheels: string;
+    FrontHeadset: string;
+    RearHeader: string;
 }

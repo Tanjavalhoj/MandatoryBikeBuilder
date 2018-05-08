@@ -10,31 +10,31 @@
         </div>  
     </div>
     <div class="form-group">
-        <label for="wheels">Wheels</label>
-       <input [(ngModel)]="bike.wheels" class="form-control" 
-                formControlName="wheels" value={{(item|async)?.wheels}}>
-        <div *ngIf="form.controls.wheels.touched && form.controls.wheels.errors">        
-    	     <div *ngIf="form.controls.wheels.errors.required" class="alert alert-danger">
+        <label for="Wheels">Wheels</label>
+       <input [(ngModel)]="bike.Wheels" class="form-control" 
+                formControlName="Wheels" value={{(item|async)?.Wheels}}>
+        <div *ngIf="form.controls.Wheels.touched && form.controls.Wheels.errors">        
+    	     <div *ngIf="form.controls.Wheels.errors.required" class="alert alert-danger">
                 Wheels is required.
             </div>
         </div>       
     </div>
     <div class="form-group">
-        <label for="headsetFront">Headset Front</label>
-        <input [(ngModel)]="bike.headsetFront" type="text" class="form-control" 
-                formControlName="headsetFront" value={{(item|async)?.headsetFront}}>
-        <div *ngIf="form.controls.headsetFront.touched && 
-                !form.controls.headsetFront.valid" class="alert alert-danger">
-            Headset Front is required
+        <label for="FrontHeadset">Front Headset</label>
+        <input [(ngModel)]="bike.FrontHeadset" type="text" class="form-control" 
+                formControlName="FrontHeadset" value={{(item|async)?.FrontHeadset}}>
+        <div *ngIf="form.controls.FrontHeadset.touched && 
+                !form.controls.FrontHeadset.valid" class="alert alert-danger">
+            Front Headset is required
         </div>  
     </div>
     <div class="form-group">
-        <label for="headsetRear">Headset Rear</label>
-        <input [(ngModel)]="bike.headsetRear" type="text" class="form-control" 
-                formControlName="headsetRear" value={{(item|async)?.headsetRear}}>
-        <div *ngIf="form.controls.headsetRear.touched && 
-                !form.controls.headsetRear.valid" class="alert alert-danger">
-            Headset Rear is required
+        <label for="RearHeadset">Rear Headset</label>
+        <input [(ngModel)]="bike.RearHeadset" type="text" class="form-control" 
+                formControlName="RearHeadset" value={{(item|async)?.RearHeadset}}>
+        <div *ngIf="form.controls.RearHeadset.touched && 
+                !form.controls.RearHeadset.valid" class="alert alert-danger">
+            Rear Headset is required
         </div>  
     </div>
    <button [disabled]="!form.valid" class="btn btn-primary" type="submit">{{ title }}</button>

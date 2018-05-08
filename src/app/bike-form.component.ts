@@ -22,8 +22,8 @@ export class BikeFormComponent  {
 
             Framecolor: ['', Validators.required],
             wheels: ['', Validators.required],
-            headsetFront: ['', Validators.required],
-            headsetRear: ['', Validators.required]
+            FrontHeadset: ['', Validators.required],
+            RearHeadset: ['', Validators.required]
         });
     }
 
@@ -45,13 +45,13 @@ export class BikeFormComponent  {
         if (this.id) {
             this.db.object(this.id).update({
                 color: this.bike.Framecolor,
-                wheels: this.bike.wheels
+                wheels: this.bike.Wheels
             });
         }
         else {
             this.db.list('/bikes').push({
                 color: this.bike.Framecolor,
-                wheels: this.bike.wheels
+                wheels: this.bike.Wheels
             });
         }
 
