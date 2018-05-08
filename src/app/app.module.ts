@@ -9,10 +9,18 @@ import { BikesComponent } from './bikes.component';
 import { BikeFormComponent } from './bike-form.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing } from './app.routing';
 
-  // Initialize Firebase
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCT6ytBBNf00cQ3gzefgWD5WJR1bGUFZ_w",
+  authDomain: "chapter12d.firebaseapp.com",
+  databaseURL: "https://chapter12d.firebaseio.com",
+  projectId: "chapter12d",
+  storageBucket: "chapter12d.appspot.com",
+  messagingSenderId: "814121287397"
+};
 
 @NgModule({
   declarations: [
@@ -21,7 +29,9 @@ import { routing } from './app.routing';
     BikeFormComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
+    AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
     ReactiveFormsModule,
     routing
