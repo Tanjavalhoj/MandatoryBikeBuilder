@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+/* Comment here */
+
 import { BikesComponent } from './bikes.component';
 import { BikeFormComponent } from './bike-form.component';
 import { AngularFireModule } from 'angularfire2';
@@ -11,14 +13,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { routing } from './app.routing';
 
   // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyCT6ytBBNf00cQ3gzefgWD5WJR1bGUFZ_w',
-    authDomain: 'chapter12d.firebaseapp.com',
-    databaseURL: 'https://chapter12d.firebaseio.com',
-    projectId: 'chapter12d',
-    storageBucket: 'chapter12d.appspot.com',
-    messagingSenderId: '814121287397'
-  };
 
 @NgModule({
   declarations: [
