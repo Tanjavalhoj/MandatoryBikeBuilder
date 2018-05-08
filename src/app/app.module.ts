@@ -1,19 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
-/* Comment here */
-
-import { BikesComponent } from './bikes.component';
-import { BikeFormComponent } from './bike-form.component';
+import {HttpModule} from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { routing } from './app.routing';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
+import { AppComponent } from './app.component';
+import {BikesComponent} from './bikes.component';
+import {routing} from './app.routing';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { BikeFormComponent } from './bike-form.component';
 
 // Initialize Firebase
-var config = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCT6ytBBNf00cQ3gzefgWD5WJR1bGUFZ_w",
   authDomain: "chapter12d.firebaseapp.com",
   databaseURL: "https://chapter12d.firebaseio.com",
@@ -29,10 +27,10 @@ var config = {
     BikeFormComponent
   ],
   imports: [
-    FormsModule,
     BrowserModule,
-    AngularFireModule.initializeApp(config),
-    AngularFirestoreModule,
+    HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     ReactiveFormsModule,
     routing
   ],

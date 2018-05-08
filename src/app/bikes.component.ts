@@ -1,48 +1,35 @@
-import { Component } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { Router } from '@angular/router';
 import { Bike } from './bike';
 
-interface User {
-    frameColor: string;
-    wheels: string;
-    headsetFront: string;
-    headsetRear: string;
-}
 @Component({
     selector: 'bikes',
     templateUrl: './bikes.component.html'
   })
 export class BikesComponent {
-  title: string;
-  content: string;
+  bikes;
 
-  bikesCol: AngularFirestoreCollection<Bike>;
-  bikes: any;
-
-  constructor(private afs: AngularFirestore, private _router: Router) {
+  constructor(private db: AngularFireDatabase, private _router: Router) {
 
   }
 
   ngOnInit() {
-    this.bikesCol = this.afs.collection('bikes');
-    this.bikes = this.bikesCol.snapshotChanges()
-    .map(actions => {
-      return actions.map(a => {
-        const data = a.payload.doc.data() as Bike;
-        const id = a.payload.doc.id;
-        return { id, data };
-      });
-    });
+    this.bikes = this.db.list('/');
   }
 
   add() {
     this._router.navigate(['add']);
   }
 
-  delete(bikeId, name) {
-    if (confirm('Are you sure you want to delete ' + name + '?')) {
-        this.afs.doc('bikes/' + bikeId).delete();
+  delete(bike) {
+    if (confirm('Are you sure you want to delete ' + bike.Framecolor + '?')) {
+        this.db.object(bike.$key).remove()
+        .then(x => console.log("SUCCESS"))
+        .catch(error => {
+          alert("Could not selete the bike.");
+          console.log("Error", error)
+        });
     }
   }
 }

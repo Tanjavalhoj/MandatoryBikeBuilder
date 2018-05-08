@@ -3,7 +3,7 @@
     <div class="form-group">
         <label for="Framecolor">Frame Color</label>
         <input [(ngModel)]="bike.Framecolor" type="text" class="form-control" 
-                formControlName="Framecolor" value={{(item|async)?.Framecolor}}>
+                formControlName="Framecolor" value={{(item|async)?.color}}>
         <div *ngIf="form.controls.Framecolor.touched && 
                 !form.controls.Framecolor.valid" class="alert alert-danger">
             Frame Color is required

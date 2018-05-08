@@ -44,13 +44,13 @@ export class BikeFormComponent  {
     submit() {
         if (this.id) {
             this.db.object(this.id).update({
-                Framecolor: this.bike.Framecolor,
+                color: this.bike.Framecolor,
                 wheels: this.bike.wheels
             });
         }
         else {
             this.db.list('/bikes').push({
-                Framecolor: this.bike.Framecolor,
+                color: this.bike.Framecolor,
                 wheels: this.bike.wheels
             });
         }
