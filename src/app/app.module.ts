@@ -22,7 +22,6 @@ import { routing } from './app.routing';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
     ReactiveFormsModule,
     routing
