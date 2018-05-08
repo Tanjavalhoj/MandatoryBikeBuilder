@@ -1,6 +1,7 @@
 export class Bike {
+    id: string;
     Framecolor: string;
     Wheels: string;
     FrontHeadset: string;
-    RearHeader: string;
+    RearHeadset: string;
 }

@@ -16,10 +16,12 @@ export class BikesComponent {
 
   ngOnInit() {
     this.bikes = this.db.list('/');
+    console.log("Here we loade");
   }
 
   add() {
     this._router.navigate(['add']);
+    console.log("here we add");
   }
 
   delete(bike) {

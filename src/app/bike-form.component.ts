@@ -44,15 +44,24 @@ export class BikeFormComponent  {
     submit() {
         if (this.id) {
             this.db.object(this.id).update({
-                color: this.bike.Framecolor,
-                wheels: this.bike.Wheels
+                Framecolor: this.bike.Framecolor,
+                Wheels: this.bike.Wheels,
+                FrontHeadset: this.bike.FrontHeadset,
+                RearHeadset: this.bike.RearHeadset
+
+                
+
             });
+            console.log("update");
         }
         else {
-            this.db.list('/bikes').push({
-                color: this.bike.Framecolor,
-                wheels: this.bike.Wheels
+            this.db.list('/').push({
+                Framecolor: this.bike.Framecolor,
+                Wheels: this.bike.Wheels,
+                FrontHeadset: this.bike.FrontHeadset,
+                RearHeadset: this.bike.RearHeadset
             });
+            console.log("push update");
         }
 
         this._router.navigate(['']);
