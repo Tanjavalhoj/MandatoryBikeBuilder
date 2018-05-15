@@ -3,7 +3,7 @@
     
 
     <div class="form-group">
-        <label for="framecolor">framecolor</label>
+        <label for="framecolor">Frame Color</label>
        <input [(ngModel)]="bike.framecolor" type="text" class="form-control" 
                 formControlName="framecolor" value={{(item|async)?.framecolor}}>
         <div *ngIf="form.controls.framecolor.touched && 
@@ -21,7 +21,7 @@
             wheels is required
         </div>
     </div>
-    
+
     <div class="form-group">
         <label for="frontheadset">Front Headset</label>
         <input [(ngModel)]="bike.frontheadset" type="text" class="form-control" 
@@ -31,6 +31,7 @@
             Front Headset is required
         </div>  
     </div>
+    
     <div class="form-group">
         <label for="rearheadset">Rear Headset</label>
         <input [(ngModel)]="bike.rearheadset" type="text" class="form-control" 
