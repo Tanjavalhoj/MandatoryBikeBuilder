@@ -25,7 +25,7 @@ export class BikesComponent {
   }
 
   delete(bike) {
-    if (confirm('Are you sure you want to delete ' + bike.Framecolor + '?')) {
+    if (confirm('Are you sure you want to delete ' + bike.framecolor + '?')) {
         this.db.object(bike.$key).remove()
         .then(x => console.log("SUCCESS"))
         .catch(error => {

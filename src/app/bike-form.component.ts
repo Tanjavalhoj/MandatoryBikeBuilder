@@ -20,10 +20,10 @@ export class BikeFormComponent  {
         private db: AngularFireDatabase) {
         this.form = fb.group({
 
-            Framecolor: ['', Validators.required],
+            framecolor: ['', Validators.required],
             wheels: ['', Validators.required],
-            FrontHeadset: ['', Validators.required],
-            RearHeadset: ['', Validators.required]
+            frontheadset: ['', Validators.required],
+            rearheadset: ['', Validators.required]
         });
     }
 
@@ -44,10 +44,10 @@ export class BikeFormComponent  {
     submit() {
         if (this.id) {
             this.db.object(this.id).update({
-                Framecolor: this.bike.Framecolor,
-                Wheels: this.bike.Wheels,
-                FrontHeadset: this.bike.FrontHeadset,
-                RearHeadset: this.bike.RearHeadset
+                framecolor: this.bike.framecolor,
+                wheels: this.bike.wheels,
+                frontheadset: this.bike.frontheadset,
+                rearheadset: this.bike.rearheadset
 
                 
 
@@ -56,10 +56,10 @@ export class BikeFormComponent  {
         }
         else {
             this.db.list('/').push({
-                Framecolor: this.bike.Framecolor,
-                Wheels: this.bike.Wheels,
-                FrontHeadset: this.bike.FrontHeadset,
-                RearHeadset: this.bike.RearHeadset
+                framecolor: this.bike.framecolor,
+                wheels: this.bike.wheels,
+                frontheadset: this.bike.frontheadset,
+                rearheadset: this.bike.rearheadset
             });
             console.log("push update");
         }

@@ -1,38 +1,42 @@
 <h1>{{ title }}</h1>
 <form [formGroup]="form" (ngSubmit)="submit()">
+    
+
     <div class="form-group">
-        <label for="Framecolor">Frame Color</label>
-        <input [(ngModel)]="bike.Framecolor" type="text" class="form-control" 
-                formControlName="Framecolor" value={{(item|async)?.Framecolor}}>
-        <div *ngIf="form.controls.Framecolor.touched && 
-                !form.controls.Framecolor.valid" class="alert alert-danger">
-            Frame Color is required
-        </div>  
-    </div>
-    <div class="form-group">
-        <label for="Wheels">Wheels</label>
-       <input [(ngModel)]="bike.Wheels" type="text" class="form-control" 
-                formControlName="Wheels" value={{(item|async)?.Wheels}}>
-        <div *ngIf="form.controls.Wheels.touched && 
-                !form.controls.Wheels.valid" class="alert alert-danger">
-            Wheels is required
+        <label for="framecolor">framecolor</label>
+       <input [(ngModel)]="bike.framecolor" type="text" class="form-control" 
+                formControlName="framecolor" value={{(item|async)?.framecolor}}>
+        <div *ngIf="form.controls.framecolor.touched && 
+                !form.controls.framecolor.valid" class="alert alert-danger">
+                framecolor is required
         </div>
     </div>
+
     <div class="form-group">
-        <label for="FrontHeadset">Front Headset</label>
-        <input [(ngModel)]="bike.FrontHeadset" type="text" class="form-control" 
-                formControlName="FrontHeadset" value={{(item|async)?.FrontHeadset}}>
-        <div *ngIf="form.controls.FrontHeadset.touched && 
-                !form.controls.FrontHeadset.valid" class="alert alert-danger">
+        <label for="wheels">wheels</label>
+       <input [(ngModel)]="bike.wheels" type="text" class="form-control" 
+                formControlName="wheels" value={{(item|async)?.wheels}}>
+        <div *ngIf="form.controls.wheels.touched && 
+                !form.controls.wheels.valid" class="alert alert-danger">
+            wheels is required
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="frontheadset">Front Headset</label>
+        <input [(ngModel)]="bike.frontheadset" type="text" class="form-control" 
+                formControlName="frontheadset" value={{(item|async)?.frontheadset}}>
+        <div *ngIf="form.controls.frontheadset.touched && 
+                !form.controls.frontheadset.valid" class="alert alert-danger">
             Front Headset is required
         </div>  
     </div>
     <div class="form-group">
-        <label for="RearHeadset">Rear Headset</label>
-        <input [(ngModel)]="bike.RearHeadset" type="text" class="form-control" 
-                formControlName="RearHeadset" value={{(item|async)?.RearHeadset}}>
-        <div *ngIf="form.controls.RearHeadset.touched && 
-                !form.controls.RearHeadset.valid" class="alert alert-danger">
+        <label for="rearheadset">Rear Headset</label>
+        <input [(ngModel)]="bike.rearheadset" type="text" class="form-control" 
+                formControlName="rearheadset" value={{(item|async)?.rearheadset}}>
+        <div *ngIf="form.controls.rearheadset.touched && 
+                !form.controls.rearheadset.valid" class="alert alert-danger">
             Rear Headset is required
         </div>  
     </div>
