@@ -9,6 +9,8 @@ import {routing} from './app.routing';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { BikeFormComponent } from './bike-form.component';
+import { AccessoriesComponent } from './accessories.component';
+import { FrameComponent } from './frame.component';
 
 // Initialize Firebase
 export const firebaseConfig = {
@@ -24,7 +26,9 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     BikesComponent,
-    BikeFormComponent
+    BikeFormComponent,
+    AccessoriesComponent,
+    FrameComponent
   ],
   imports: [
     BrowserModule,

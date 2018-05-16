@@ -2,15 +2,34 @@
 <div class="box green"> </div>
 <div class="box blue"> </div>
 
+<script>
+	console.log('her nr. 1');
+</script>
+
+<i
+class="box"
+[class.box-empty]="number < 1"
+[class.box-green]="number >= 1"
+(click)="onClick(1)"  
+>
+</i>
+<script>
+	console.log('her nr. 2');
+</script>
+
 <style>
 .box{
 	width:100px;
 	height:100px;
 }
  
+ .empty{
+	 background:#ffffff;  
+ }
+ 
 .black{
 	
-    background-image: url('/assets/images/frames/Classic.png');
+    background: black;
 }
 .green{
 	background:#0f0;
@@ -19,3 +38,7 @@
 	background:#00f;
 }
 </style>
+
+<script>
+	console.log('her nr. 3');
+</script>
