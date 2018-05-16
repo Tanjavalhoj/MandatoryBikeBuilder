@@ -31,31 +31,35 @@
 	</tbody>
 </table>
 
-<div class="box black"></div>
-<div class="box green"> </div>
-<div class="box blue"> </div>
+<div class="accessories">
+	<label>
+	  <input type="checkbox" />
+	  <span class="seatButton">H1</span>
+	</label>
+	<label>
+	  <input type="checkbox" />
+	  <span class="seatButton">H1</span>
+	</label>
+	<label>
+	  <input type="checkbox" />
+	  <span class="seatButton">H1</span>
+	</label>
+	<label>
+	  <input type="checkbox" />
+	  <span class="seatButton">H1</span>
+	</label>
+	<label>
+	  <input type="checkbox" />
+	  <span class="seatButton">H1</span>
+	</label>
+  </div>
 
-<i class="box pink">
-</i>
+  <script>
+  
+  </script>
 
 <style>
-.box{
-	width:100px;
-	height:100px;
-}
- 
- .empty{
-	 background: pink;  
- }
- 
-.black{
-	
-    background: black;
-}
-.green{
-	background:#0f0;
-}
-.blue{
-	background:#00f;
-}
+	.accessories input { display: none; }
+	.accessories .seatButton { padding: 5px; border: 1px solid #ccc; background: yellow; }
+	.accessories input:checked + .seatButton { background: red; }
 </style>
