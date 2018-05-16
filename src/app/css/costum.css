@@ -1,32 +1,31 @@
 @charset "utf-8";
 /* CSS Document */
 .background {
-	position: absolute;
-	width: 960px;
+	position: relative;
+	width: 100%;
 	z-index: 1;
 }
 .drivetrain {
 	position: absolute;
-	top: 350px;
-	left: 300px;
+	top: 40%;
+	left: 25%;
 	z-index: 3;
-	width: 600px;
+	max-width: 50%;
 }
 .frame {
 	position: absolute;
-	top: 370px;
-	left: 380px;
+	top: 41.95%;
+	left: 31.8%;
 	z-index: 2;
-	width: 465px;
+	max-width: 38.5%;
 }
 .chosecolor {
-	position: absolute;
-	top: 700px;
+	position: relative;
 }
 .colorbox {
 	float: left;
 	margin: 10px;
 }
 .color {
-	width: 80px;
+	width: 90%;
 }
