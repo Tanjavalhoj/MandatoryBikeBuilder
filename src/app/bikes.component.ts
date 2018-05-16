@@ -34,4 +34,11 @@ export class BikesComponent {
         });
     }
   }
+
+public accessoriesSave: boolean;
+
+public onAccessoriesSave(value: boolean){
+  this.accessoriesSave = value;
 }
+}
+
