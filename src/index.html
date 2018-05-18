@@ -15,34 +15,43 @@
   <h1>E8000 BULLITT</h1>
     <div class="container">
 		<img src="./assets/images/benches-environment-flower-983436.jpg" alt="park med en bænk" class="background">
-		<img class="drivetrain" src="./assets/images/Cykel dele/ebullit_drivetrain2_1.png" alt="hjul og gear">
-	  <img src="./assets/images/Billeder fra Website/Classic.png" alt="Farve" class="frame">
+		<img class="drivetrain" src="./assets/images/Cykel dele/ebullit_drivetrain2.png" alt="hjul og gear">
+		<img id="imageToSwap" src="./assets/images/Billeder fra Website/Classic.png" alt="Farve" class="frame">
+		
 	  
 		
 		<div class="chosecolor">
 			<div class="colorbox">
-				<img src="./assets/images/Farver/bluebird_1_1.png" alt="blue bird" class="color">
+				<button id="bluebirdFrame" onClick="changeColor('Bluebird.png')" class="color"></button>
+				<p>Blue Bird</p>
 			</div>
 			<div class="colorbox">
-				<img src="./assets/images/Farver/circle-classic_1_1_1.png" alt="blue bird" class="color">
+				<button id="classicFrame" onClick="changeColor('Classic.png')" class="color"></button>
+				<p>Classic</p>
 			</div>
 			<div class="colorbox">
-				<img src="./assets/images/Farver/circle-clockwork_1_1_1.png" alt="blue bird" class="color">
+				<button id="clockworkFrame" onClick="changeColor('Clockword.png')" class="color"></button>
+				<p>Clockwork</p>
 			</div>
 			<div class="colorbox">
-				<img src="./assets/images/Farver/circle-lizzard-king_1_1_1.png" alt="blue bird" class="color">
+				<button id="lizzardFrame" onClick="changeColor('LizzardKing.png')" class="color"></button>
+				<p>Lizzard</p>
 			</div>
 			<div class="colorbox">
-				<img src="./assets/images/Farver/circle-race_1_1_1_1.png" alt="blue bird" class="color">
+				<button id="raceFrame" onClick="changeColor('Race.png')" class="color"></button>
+				<p>Race</p>
 			</div>
 			<div class="colorbox">
-				<img src="./assets/images/Farver/milk_plus_color_2_1.png" alt="blue bird" class="color">
+				<button id="milkFrame" onClick="changeColor('Milk.png')" class="color"></button>
+				<p>Milk</p>
 			</div>
 			<div class="colorbox">
-				<img src="./assets/images/Farver/pepper_color_1_1.png" alt="blue bird" class="color">
+				<button id="pepperFrame" onClick="changeColor('Pepper.png')" class="color"></button>
+				<p>Pepper</p>
 			</div>
 			<div class="colorbox">
-				<img src="./assets/images/Farver/submarine_color_1_1.png" alt="blue bird" class="color">
+				<button id="submarineFrame" onClick="changeColor('Submarine.png')" class="color"></button>
+				<p>Submarine</p>
 			</div>
 		
 		</div>
@@ -52,6 +61,76 @@
     
 		<app-root></app-root>
 		
+
+<script>
+		
+		function changeColor(newColor) {
+				color = newColor;
+				updateImage();
+		}
+		
+		function updateImage(){
+				var image = document.getElementById("imageToSwap");
+				image.src = "./assets/images/Billeder fra Website/" + color;
+		};
+</script>
+		
+
+		<style>
+			.colorbox{
+				text-align: center;
+			}
+		 #lizzardFrame {
+			background: url(./assets/images/Farver/circle-lizzard-king_1_1_1.png);
+			height: 93px;
+			width: 93px;
+			border: none;
+		 }
+		 #submarineFrame{
+			background: url(./assets/images/Farver/submarine_color_1_1.png);
+			height: 93px;
+			width: 93px;
+			border: none;
+		 }
+		 #classicFrame{
+			background: url(./assets/images/Farver/circle-classic_1_1_1.png);
+			height: 93px;
+			width: 93px;
+			border: none;
+		 }
+		 #pepperFrame{
+			background: url(./assets/images/Farver/pepper_color_1_1.png);
+			height: 93px;
+			width: 93px;
+			border:none;
+		 }
+		 #milkFrame{
+			background: url(./assets/images/Farver/milk_plus_color_2_1.png);
+			height: 93px;
+			width: 93px;
+			border: none;
+		 }
+		 #clockworkFrame{
+			background: url(./assets/images/Farver/circle-clockwork_1_1_1.png);
+			height: 93px;
+			width: 93px;
+			border: none;
+		 }
+		 #raceFrame{
+			background: url(./assets/images/Farver/circle-race_1_1_1_1.png);
+			height: 93px;
+			width: 93px;
+			border: none;
+		 }
+		 #bluebirdFrame{
+			background: url(./assets/images/Farver/bluebird_1_1.png);
+			height: 93px;
+			width: 93px;
+			border: none;
+		 }
+		 
+
+		</style>
 
 </body>
 </html>
