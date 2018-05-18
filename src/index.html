@@ -33,7 +33,7 @@
 				<p>Clockwork</p>
 			</div>
 			<div class="colorbox">
-				<button id="lizzardFrame" onClick="changeColor('LizzardKing.png')" class="color"></button>
+				<button id="lizzardFrame" onClick="changeColor('Lizzard-king')" class="color"></button>
 				<p>Lizzard</p>
 			</div>
 			<div class="colorbox">
@@ -62,18 +62,26 @@
 		
 
 <script>
-		
+		accesory = "-frame.png"
 		function changeColor(newColor) {
 				color = newColor;
 				updateImage();
 		}
-		
-		function updateImage(){
+		function changeaccessory(newAccessory) {
+				accesory = newAccessory;
+				updateImage();
+		}
+
+		function updateImage(bikeColor){
 				var image = document.getElementById("imageToSwap");
-				image.src = "./assets/images/Billeder fra Website/" + color;
+				bikeColor = image.src = "./assets/images/Billeder til web/Cykel/" + color + accesory;
 		};
-</script>
 		
+</script>
+		<label class="col-sm-4" >
+			<input onClick="changeaccessory('-canopy.png')" type="checkbox" id="canopy" />
+			<span class="seatButton">Canopy</span>
+		</label>
 
 		<style>
 			.colorbox{
