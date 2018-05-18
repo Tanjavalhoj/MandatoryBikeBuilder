@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+.container {
+  max-width: 960px !important;
+}
 .background {
 	position: relative;
 	width: 100%;
@@ -28,7 +31,4 @@
 }
 .color {
 	width: 90%;
-}
-.container {
- max-width: 960px !important;
 }
