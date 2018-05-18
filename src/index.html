@@ -78,10 +78,119 @@
 		};
 		
 </script>
-		<label class="col-sm-4" >
-			<input onClick="changeaccessory('-canopy.png')" type="checkbox" id="canopy" />
-			<span class="seatButton">Canopy</span>
-		</label>
+
+		<div class="container">
+			<div class="row accessories">
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-convoy-box.png')" type="checkbox" id="convoybox" />
+					<span class="seatButton">Convoy Box</span>
+				</label>
+
+				<label class="col-sm-4">
+					<input onClick="changeaccessory('-plastic-box.png')" type="checkbox" id="plasticbox" />
+					<span class="seatButton">Plastic Box</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-alubox')" type="checkbox" id="alubox" />
+					<span class="seatButton">Alu Box</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-canopy.png')" type="checkbox" id="canopy" />
+					<span class="seatButton">Canopy</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input type="checkbox" id="damperkit" />
+					<span class="seatButton">Damper Kit</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-child-seat.png')" type="checkbox" id="foldableseat" />
+					<span class="seatButton">Foldable child seat</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input type="checkbox" id="honeycompboard" />
+					<span class="seatButton">Honeycomp Board</span>
+				</label>
+
+				<!--BBX section-->
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-bbx-black.png')" type="checkbox" id="billboard" />
+					<span class="seatButton">BBX-Black</span>
+				</label>
+				
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-bbx-blue.png')" type="checkbox" id="billboard" />
+					<span class="seatButton">BBX-Blue</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-bbx-green.png')" type="checkbox" id="billboard"  />
+					<span class="seatButton">BBX-Green</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-bbx-orange.png')" type="checkbox" id="billboard"  />
+					<span class="seatButton">BBX-Orange</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-bbx-red.png')" type="checkbox" id="billboard"  />
+					<span class="seatButton">BBX-Red</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-bbx-white.png')" type="checkbox" id="billboard"  />
+					<span class="seatButton">BBX-White</span>
+				</label>
+
+				<!--Billboard section-->
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-billboard-black.png')" type="checkbox" id="bbx"  />
+					<span class="seatButton">Billboard-Black</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-billboard-blue.png')" type="checkbox" id="bbx"  />
+					<span class="seatButton">Billboard-Blue</span>
+				</label>
+			
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-billboard-green.png')" type="checkbox" id="bbx"  />
+					<span class="seatButton">Billboard-Green</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-billboard-dark-green.png')" type="checkbox" id="bbx"  />
+					<span class="seatButton">Billboard-Dark Green</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-billboard-orange.png')" type="checkbox" id="bbx"  />
+					<span class="seatButton">Billboard-Orange</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-billboard-red.png')" type="checkbox" id="bbx"  />
+					<span class="seatButton">Billboard-Red</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-billboard-white.png')" type="checkbox" id="bbx"  />
+					<span class="seatButton">Billboard-White</span>
+				</label>
+
+				<label class="col-sm-4" >
+					<input onClick="changeaccessory('-billboard-yellow.png')" type="checkbox" id="bbx"  />
+					<span class="seatButton">Billboard-Yellow</span>
+				</label>	
+			</div>
+		</div>
+		
 
 		<style>
 			.colorbox{
@@ -136,6 +245,20 @@
 			border: none;
 		 }
 		 
+		 .accessories input {
+				display: none;
+			}
+		
+			.accessories .seatButton {
+				padding: 5px;
+				border: 1px solid green;
+				background: white;
+				cursor: pointer;
+			}
+		
+			.accessories input:checked+.seatButton {
+				background: green;
+			}
 
 		</style>
 
