@@ -12,314 +12,327 @@
   
 </head>
 <body>
-  <h1>E8000 BULLITT</h1>
-    <div class="container">
+<h1>E8000 BULLITT</h1>
+<div class="container">
 		<img src="./assets/images/benches-environment-flower-983436.jpg" alt="park med en bænk" class="background">
-		<img id="imageToSwap" src="./assets/images/Billeder fra Website/Classic.png" alt="Farve" class="frame">
-		<button onclick="myFunction()">Try it</button>
-		<button onclick="myFunction2()">Try it</button>
-		<button onclick="myFunction3()">Try it</button>
+		<img id="imageToSwap" src="./assets/images/Billeder til web/Cykel/Classic-frame.png" alt="Farve" class="frame">
+		<button onclick="colours()">Try it</button>
+		<button onclick="accessory()">Try it</button>
+		<button onclick="receipt()">Try it</button>
 	  
-	<div id="myDIV">
+	<div id="chooseColor">
 		<div class="chosecolor">
 			<div class="colorbox">
-				<button id="bluebirdFrame" onClick="changeColor('Bluebird');myFunction();" class="color"></button>
+				<button id="bluebirdFrame" onClick="changeColor('Bluebird');colours();" class="color"></button>
 				<p>Blue Bird</p>
+				<p>Pris: 50.000</p>
 			</div>
 			<div class="colorbox">
-				<button id="classicFrame" onClick="changeColor('Classic');myFunction();" class="color"></button>
+				<button id="classicFrame" onClick="changeColor('Classic');colours();" class="color"></button>
 				<p>Classic</p>
+				<p>Pris: 50.000</p>
 			</div>
 			<div class="colorbox">
-				<button id="clockworkFrame" onClick="changeColor('Clockwork');myFunction();" class="color"></button>
+				<button id="clockworkFrame" onClick="changeColor('Clockwork');colours();" class="color"></button>
 				<p>Clockwork</p>
+				<p>Pris: 50.000</p>
 			</div>
 			<div class="colorbox">
-				<button id="lizzardFrame" onClick="changeColor('Lizzard-king');myFunction();" class="color"></button>
+				<button id="lizzardFrame" onClick="changeColor('Lizzard-king');colours();" class="color"></button>
 				<p>Lizzard</p>
+				<p>Pris: 50.000</p>
 			</div>
 			<div class="colorbox">
-				<button id="raceFrame" onClick="changeColor('Race');myFunction();" class="color"></button>
+				<button id="raceFrame" onClick="changeColor('Race');colours();" class="color"></button>
 				<p>Race</p>
+				<p>Pris: 50.000</p>
 			</div>
 			<div class="colorbox">
-				<button id="milkFrame" onClick="changeColor('Milk');myFunction();" class="color"></button>
+				<button id="milkFrame" onClick="changeColor('Milk');colours();" class="color"></button>
 				<p>Milk</p>
+				<p>Pris: 50.000</p>
 			</div>
 			<div class="colorbox">
-				<button id="pepperFrame" onClick="changeColor('Pepper');myFunction();" class="color"></button>
+				<button id="pepperFrame" onClick="changeColor('Pepper');colours();" class="color"></button>
 				<p>Pepper</p>
+				<p>Pris: 50.000</p>
 			</div>
 			<div class="colorbox">
-				<button id="submarineFrame" onClick="changeColor('Submarine');myFunction();" class="color"></button>
+				<button id="submarineFrame" onClick="changeColor('Submarine');colours();" class="color"></button>
 				<p>Submarine</p>
+				<p>Pris: 50.000</p>
 			</div>
-		
 		</div>
-	  </div>
-	  <div id="myDIV3">
-		  <div>
-			  <p>Her er din kvitering</p>
-		  </div>
-	  </div>
-
-
-
 	</div>
-    
-		<app-root></app-root>
-		
 
-<script>
-		accesory = "-frame.png"
-		function changeColor(newColor) {
-				color = newColor;
-				updateImage();
-		}
-		function changeaccessory(newAccessory) {
-				accesory = newAccessory;
-				updateImage();
-		}
-
-		function updateImage(bikeColor){
-				var image = document.getElementById("imageToSwap");
-				bikeColor = image.src = "./assets/images/Billeder til web/Cykel/" + color + accesory;
-		};
-		
-		function myFunction() {
-		var x = document.getElementById("myDIV");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-			}
-		}
-
-		function myFunction2() {
-			var x = document.getElementById("myDIV2");
-			if (x.style.display === "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none";
-			}
-		}
-
-		function myFunction3() {
-			var x = document.getElementById("myDIV2");
-			if (x.style.display === "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none";
-			}
-		}
-
-
-</script>
-	<div id="myDIV2">
-		<div class="container">
+	<div class="whitespace"></div>
+	<br>
+	<div id="chooseAccessory">
 			<div class="row accessories">
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-convoy-box.png');myFunction2();" type="checkbox" id="convoybox" />
+					<input onClick="changeaccessory('-convoy-box.png');accessory();" type="checkbox" id="convoybox" />
 					<span class="seatButton">Convoy Box</span>
 				</label>
-
+	
 				<label class="col-sm-4">
-					<input onClick="changeaccessory('-plastic-box.png');myFunction2();" type="checkbox" id="plasticbox" />
+					<input onClick="changeaccessory('-plastic-box.png');accessory();" type="checkbox" id="plasticbox" />
 					<span class="seatButton">Plastic Box</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-alubox.png');myFunction2();" type="checkbox" id="alubox" />
+					<input onClick="changeaccessory('-alubox.png');accessory();" type="checkbox" id="alubox" />
 					<span class="seatButton">Alu Box</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-canopy.png');myFunction2();" type="checkbox" id="canopy" />
+					<input onClick="changeaccessory('-canopy.png');accessory();" type="checkbox" id="canopy" />
 					<span class="seatButton">Canopy</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input type="checkbox" id="damperkit" onclick="myFunction2();" />
+					<input type="checkbox" id="damperkit" onclick="accessory();" />
 					<span class="seatButton">Damper Kit</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-child-seat.png');myFunction2();" type="checkbox" id="foldableseat" />
+					<input onClick="changeaccessory('-child-seat.png');accessory();" type="checkbox" id="foldableseat" />
 					<span class="seatButton">Foldable child seat</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input type="checkbox" id="honeycompboard" onclick="myFunction2();" />
+					<input type="checkbox" id="honeycompboard" onclick="accessory();" />
 					<span class="seatButton">Honeycomp Board</span>
 				</label>
-
+	
 				<!--BBX section-->
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-bbx-black.png');myFunction2();" type="checkbox" id="billboard" />
+					<input onClick="changeaccessory('-bbx-black.png');accessory();" type="checkbox" id="billboard" />
 					<span class="seatButton">BBX-Black</span>
 				</label>
 				
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-bbx-blue.png');myFunction2();" type="checkbox" id="billboard" />
+					<input onClick="changeaccessory('-bbx-blue.png');accessory();" type="checkbox" id="billboard" />
 					<span class="seatButton">BBX-Blue</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-bbx-green.png');myFunction2();" type="checkbox" id="billboard"  />
+					<input onClick="changeaccessory('-bbx-green.png');accessory();" type="checkbox" id="billboard"  />
 					<span class="seatButton">BBX-Green</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-bbx-orange.png');myFunction2();" type="checkbox" id="billboard"  />
+					<input onClick="changeaccessory('-bbx-orange.png');accessory();" type="checkbox" id="billboard"  />
 					<span class="seatButton">BBX-Orange</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-bbx-red.png');myFunction2();" type="checkbox" id="billboard"  />
+					<input onClick="changeaccessory('-bbx-red.png');accessory();" type="checkbox" id="billboard"  />
 					<span class="seatButton">BBX-Red</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-bbx-white.png');myFunction2();" type="checkbox" id="billboard"  />
+					<input onClick="changeaccessory('-bbx-white.png');accessory();" type="checkbox" id="billboard"  />
 					<span class="seatButton">BBX-White</span>
 				</label>
-
+	
 				<!--Billboard section-->
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-billboard-black.png');myFunction2();" type="checkbox" id="bbx"  />
+					<input onClick="changeaccessory('-billboard-black.png');accessory();" type="checkbox" id="bbx"  />
 					<span class="seatButton">Billboard-Black</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-billboard-blue.png');myFunction2();" type="checkbox" id="bbx"  />
+					<input onClick="changeaccessory('-billboard-blue.png');accessory();" type="checkbox" id="bbx"  />
 					<span class="seatButton">Billboard-Blue</span>
 				</label>
 			
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-billboard-green.png');myFunction2();" type="checkbox" id="bbx"  />
+					<input onClick="changeaccessory('-billboard-green.png');accessory();" type="checkbox" id="bbx"  />
 					<span class="seatButton">Billboard-Green</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-billboard-dark-green.png');myFunction2();" type="checkbox" id="bbx"  />
+					<input onClick="changeaccessory('-billboard-dark-green.png');accessory();" type="checkbox" id="bbx"  />
 					<span class="seatButton">Billboard-Dark Green</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-billboard-orange.png');myFunction2();" type="checkbox" id="bbx"  />
+					<input onClick="changeaccessory('-billboard-orange.png');accessory();" type="checkbox" id="bbx"  />
 					<span class="seatButton">Billboard-Orange</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-billboard-red.png');myFunction2();" type="checkbox" id="bbx"  />
+					<input onClick="changeaccessory('-billboard-red.png');accessory();" type="checkbox" id="bbx"  />
 					<span class="seatButton">Billboard-Red</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-billboard-white.png');myFunction2();" type="checkbox" id="bbx"  />
+					<input onClick="changeaccessory('-billboard-white.png');accessory();" type="checkbox" id="bbx"  />
 					<span class="seatButton">Billboard-White</span>
 				</label>
-
+	
 				<label class="col-sm-4" >
-					<input onClick="changeaccessory('-billboard-yellow.png');myFunction2();" type="checkbox" id="bbx"  />
+					<input onClick="changeaccessory('-billboard-yellow.png');accessory();" type="checkbox" id="bbx"  />
 					<span class="seatButton">Billboard-Yellow</span>
 				</label>	
 			</div>
+	</div>
+<br>
+	<div class="whitespace"></div>
+
+	<div id="showReceipt">
+		<div class="container receipt">
+			<p>Her er din kvitering</p>
 		</div>
 	</div>
+</div>
+<script>
+
+//Update the image, so it shows the bike color, and the bike accessories.
+accesory = "-frame.png"
+function changeColor(newColor) {
+		color = newColor;
+		updateImage();
+}
+function changeaccessory(newAccessory) {
+		accesory = newAccessory;
+		updateImage();
+}
+
+function updateImage(bikeColor){
+		var image = document.getElementById("imageToSwap");
+		bikeColor = image.src = "./assets/images/Billeder til web/Cykel/" + color + accesory;
+};
+
+//Show / hide next step
+function colours() {
+	var x = document.getElementById("chooseColor");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+		}
+	accessory().style.display = "none";
+	receipt().style.display = "none";
+}
+
+function accessory() {
+	var x = document.getElementById("chooseAccessory");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+	colours().style.display = "none";
+	receipt().style.display = "none";
+}
+
+function receipt() {
+	var x = document.getElementById("showReceipt");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+	accessory().style.display = "none";
+	colours().style.display = "none";
+
+}
+</script>
+
+
 		
-
-
-
+<app-root></app-root>
 
 <style>
 
-		#myDIV {
-		width: 100%;
-		padding: 50px 0;
-		text-align: center;
-		margin-top: 20px;
-		}
+.whitespace{
+	height: 10px;
+}
 
-		#myDIV2 {
-		width: 100%;
-		padding: 50px 0;
-		text-align: center;
-		margin-top: 20px;
-		}
+#myDIV {
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#myDIV2 {
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	margin-top: 20px;
+}
 
 
+.colorbox{
+	text-align: center;
+}
+#lizzardFrame {
+	background: url(./assets/images/Farver/circle-lizzard-king_1_1_1.png);
+	height: 93px;
+	width: 93px;
+	border: none;
+}
+#submarineFrame{
+	background: url(./assets/images/Farver/submarine_color_1_1.png);
+	height: 93px;
+	width: 93px;
+	border: none;
+	}
+#classicFrame{
+	background: url(./assets/images/Farver/circle-classic_1_1_1.png);
+	height: 93px;
+	width: 93px;
+	border: none;
+}
+#pepperFrame{
+	background: url(./assets/images/Farver/pepper_color_1_1.png);
+	height: 93px;
+	width: 93px;
+	border:none;
+}
+#milkFrame{
+	background: url(./assets/images/Farver/milk_plus_color_2_1.png);
+	height: 93px;
+	width: 93px;
+	border: none;
+}
+#clockworkFrame{
+	background: url(./assets/images/Farver/circle-clockwork_1_1_1.png);
+	height: 93px;
+	width: 93px;
+	border: none;
+}
+#raceFrame{
+	background: url(./assets/images/Farver/circle-race_1_1_1_1.png);
+	height: 93px;
+	width: 93px;
+	border: none;
+}
+#bluebirdFrame{
+	background: url(./assets/images/Farver/bluebird_1_1.png);
+	height: 93px;
+	width: 93px;
+	border: none;
+}
+	
+.accessories input {
+	display: none;
+}
 
+.accessories .seatButton {
+	padding: 5px;
+	border: 1px solid green;
+	background: white;
+	cursor: pointer;
+}
 
-		.colorbox{
-				text-align: center;
-			}
-		#lizzardFrame {
-			background: url(./assets/images/Farver/circle-lizzard-king_1_1_1.png);
-			height: 93px;
-			width: 93px;
-			border: none;
-		 }
-		#submarineFrame{
-			background: url(./assets/images/Farver/submarine_color_1_1.png);
-			height: 93px;
-			width: 93px;
-			border: none;
-		 }
-		#classicFrame{
-			background: url(./assets/images/Farver/circle-classic_1_1_1.png);
-			height: 93px;
-			width: 93px;
-			border: none;
-		 }
-		#pepperFrame{
-			background: url(./assets/images/Farver/pepper_color_1_1.png);
-			height: 93px;
-			width: 93px;
-			border:none;
-		 }
-		 #milkFrame{
-			background: url(./assets/images/Farver/milk_plus_color_2_1.png);
-			height: 93px;
-			width: 93px;
-			border: none;
-		 }
-		 #clockworkFrame{
-			background: url(./assets/images/Farver/circle-clockwork_1_1_1.png);
-			height: 93px;
-			width: 93px;
-			border: none;
-		 }
-		 #raceFrame{
-			background: url(./assets/images/Farver/circle-race_1_1_1_1.png);
-			height: 93px;
-			width: 93px;
-			border: none;
-		 }
-		 #bluebirdFrame{
-			background: url(./assets/images/Farver/bluebird_1_1.png);
-			height: 93px;
-			width: 93px;
-			border: none;
-		 }
-		 
-		 .accessories input {
-				display: none;
-			}
-		
-			.accessories .seatButton {
-				padding: 5px;
-				border: 1px solid green;
-				background: white;
-				cursor: pointer;
-			}
-		
-			.accessories input:checked+.seatButton {
-				background: green;
-			}
-
-		</style>
+.accessories input:checked+.seatButton {
+	background: green;
+}
+</style>
 
 </body>
 </html>
