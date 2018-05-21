@@ -16,11 +16,17 @@
 	max-width: 50%;
 }
 .frame {
-	position: absolute;
-	top: 41.95%;
-	left: 31.8%;
-	z-index: 2;
-	max-width: 38.5%;
+  position: absolute;
+  /*top: 400px;
+  left: 100px;*/
+  z-index: 2;
+  margin: 0;
+  position: absolute;
+  top: 490px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
 }
 .chosecolor {
 	position: relative;
