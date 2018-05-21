@@ -36,8 +36,11 @@
 .color {
 	width: 90%;
 }
+.statusbar {
+  width: 100%;
+}
 .status {
-  width: 33%;
+  width: 33.333333333333333333333333333333333333333333%;
   float: left;
   text-align: center;
   background-color: #a2a2a2;
