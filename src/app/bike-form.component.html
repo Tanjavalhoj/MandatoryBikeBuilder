@@ -13,33 +13,14 @@
     </div>
 
     <div class="form-group">
-        <label for="wheels">wheels</label>
-       <input [(ngModel)]="bike.wheels" type="text" class="form-control" 
-                formControlName="wheels" value={{(item|async)?.wheels}}>
-        <div *ngIf="form.controls.wheels.touched && 
-                !form.controls.wheels.valid" class="alert alert-danger">
-            wheels is required
+        <label for="accessory">accessory</label>
+       <input [(ngModel)]="bike.accessory" type="text" class="form-control" 
+                formControlName="accessory" value={{(item|async)?.accessory}}>
+        <div *ngIf="form.controls.accessory.touched && 
+                !form.controls.accessory.valid" class="alert alert-danger">
+            accessory is required
         </div>
     </div>
-
-    <div class="form-group">
-        <label for="frontheadset">Front Headset</label>
-        <input [(ngModel)]="bike.frontheadset" type="text" class="form-control" 
-                formControlName="frontheadset" value={{(item|async)?.frontheadset}}>
-        <div *ngIf="form.controls.frontheadset.touched && 
-                !form.controls.frontheadset.valid" class="alert alert-danger">
-            Front Headset is required
-        </div>  
-    </div>
     
-    <div class="form-group">
-        <label for="rearheadset">Rear Headset</label>
-        <input [(ngModel)]="bike.rearheadset" type="text" class="form-control" 
-                formControlName="rearheadset" value={{(item|async)?.rearheadset}}>
-        <div *ngIf="form.controls.rearheadset.touched && 
-                !form.controls.rearheadset.valid" class="alert alert-danger">
-            Rear Headset is required
-        </div>  
-    </div>
    <button [disabled]="!form.valid" class="btn btn-primary" type="submit">{{ title }}</button>
 </form>

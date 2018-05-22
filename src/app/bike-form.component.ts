@@ -21,9 +21,7 @@ export class BikeFormComponent  {
         this.form = fb.group({
 
             framecolor: ['', Validators.required],
-            wheels: ['', Validators.required],
-            frontheadset: ['', Validators.required],
-            rearheadset: ['', Validators.required]
+            accessory: ['', Validators.required]
         });
     }
 
@@ -45,21 +43,14 @@ export class BikeFormComponent  {
         if (this.id) {
             this.db.object(this.id).update({
                 framecolor: this.bike.framecolor,
-                wheels: this.bike.wheels,
-                frontheadset: this.bike.frontheadset,
-                rearheadset: this.bike.rearheadset
-
-                
-
+                accessory: this.bike.accessory
             });
             console.log("update");
         }
         else {
             this.db.list('/').push({
                 framecolor: this.bike.framecolor,
-                wheels: this.bike.wheels,
-                frontheadset: this.bike.frontheadset,
-                rearheadset: this.bike.rearheadset
+                accessory: this.bike.accessory
             });
             console.log("push update");
         }

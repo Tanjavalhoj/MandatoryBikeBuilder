@@ -1,22 +1,18 @@
 <h1>Bikes</h1>
-<button class="btn btn-primary" (click)="add()">Add</button>
+<button type="button" class="btn btn-primary" (click)="add()">Add</button>
 <table class="table table-bordered">
 	<thead>
 		<tr>
 			<th>Frame Color</th>
-			<th>wheels</th>
-			<th>Headset Front</th>
-			<th>Headset Rear</th>
+			<th>accessory</th>
 			<th>Edit</th>
 			<th>Delete</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr *ngFor="let bike of bikes | async">
-			<td>{{ bike.wheels }}</td>
 			<td>{{ bike.framecolor }}</td>
-			<td>{{ bike.frontheadset }}</td>
-			<td>{{ bike.rearheadset }}</td>
+			<td>{{ bike.accessory }}</td>
 			<td>
 				<a [routerLink]="['/add', bike.$key]">
 					<i class="glyphicon glyphicon-edit"></i>

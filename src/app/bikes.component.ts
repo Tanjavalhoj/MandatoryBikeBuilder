@@ -29,7 +29,7 @@ export class BikesComponent {
         this.db.object(bike.$key).remove()
         .then(x => console.log("SUCCESS"))
         .catch(error => {
-          alert("Could not selete the bike.");
+          alert("Could not delete the bike.");
           console.log("Error", error)
         });
     }
