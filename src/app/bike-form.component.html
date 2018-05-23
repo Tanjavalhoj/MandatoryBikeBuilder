@@ -192,7 +192,7 @@
 
     <div class="form-group">
         <label for="accessory">accessory</label>
-       <input readonly="readonly" [(ngModel)]="bike.accessory" id="show" type="text" class="form-control" 
+       <input [(ngModel)]="bike.accessory" id="show" type="text" class="form-control" 
                 formControlName="accessory" value={{(item|async)?.accessory}}>
         <div *ngIf="form.controls.accessory.touched && 
                 !form.controls.accessory.valid" class="alert alert-danger">
@@ -200,7 +200,7 @@
         </div>
     </div>
     
-   <button [disabled]="!form.invalid" class="btn btn-primary" type="submit">{{ title }}</button>
+   <button [disabled]="!form.valid" class="btn btn-primary" type="submit">{{ title }}</button>
 </form>
 </div>
 </div>

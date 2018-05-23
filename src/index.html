@@ -72,7 +72,7 @@ $(document).ready(function() {
         var string = $checks.filter(":checked").map(function(i,v){
             return this.value;
         }).get().join(" ");
-        $('#show').val(string);
+		$('#show').val(string);
     }).trigger('change');
 });
 
