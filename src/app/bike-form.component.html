@@ -194,9 +194,7 @@
         <label for="accessory">accessory</label>
        <input [(ngModel)]="bike.accessory" id="show" type="text" class="form-control" 
                 formControlName="accessory" value={{(item|async)?.accessory}}>
-        <div *ngIf="form.controls.accessory.touched && 
-                !form.controls.accessory.valid" class="alert alert-danger">
-            accessory is required
+        
         </div>
     </div>
     
