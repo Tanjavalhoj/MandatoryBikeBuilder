@@ -13,188 +13,8 @@
 
 </head>
 <body>
-<h1>E8000 BULLITT</h1>
-<div class="container">
-		<img src="./assets/images/benches-environment-flower-983436.jpg" alt="park med en bænk" class="background">
-		<img id="imageToSwap" src="./assets/images/Billeder til web/Cykel/Classic-frame.png" alt="Farve" class="frame">
-		<button onclick="colours()">Try it</button>
-		<button onclick="accessory()">Try it</button>
-		<button onclick="receipt()">Try it</button>
 
-    <div class="row statusbar">
-      <div class="col-sm-12 col-md-4 status vælgfarve">
-        <button><h1>Vælg Farve</h1></button>
-      </div>
-      <div class="col-sm-12 col-md-4 status tilbehør">
-        <button><h1>Tilføj Tilbehør</h1></button>
-      </div>
-      <div class="col-sm-12 col-md-4 status kurv">
-        <button><h1>Kurv</h1></button>
-      </div>
-    </div>
 
-	<div id="chooseColor">
-		<div class="row chosecolor">
-			<div class="col-xs-3 col-sm-1 colorbox">
-				<button id="bluebirdFrame" onClick="changeColor('Bluebird');colours();" class="color"><p>Blue Bird</p></button>
-				<p>Pris: 50.000</p>
-			</div>
-			<div class="col-xs-3 col-sm-1 colorbox">
-				<button id="classicFrame" onClick="changeColor('Classic');colours();" class="color"><p>Classic</p></button>
-				<p>Pris: 50.000</p>
-			</div>
-			<div class="col-xs-3 col-sm-1 colorbox">
-				<button id="clockworkFrame" onClick="changeColor('Clockwork');colours();" class="color"><p>Clockwork</p></button>
-				<p>Pris: 50.000</p>
-			</div>
-			<div class="col-xs-3 col-sm-1 colorbox">
-				<button id="lizzardFrame" onClick="changeColor('Lizzard-king');colours();" class="color"><p>Lizzard</p></button>
-				<p>Pris: 50.000</p>
-			</div>
-			<div class="col-xs-3 col-sm-1 colorbox">
-				<button id="raceFrame" onClick="changeColor('Race');colours();" class="color"><p>Race</p></button>
-				<p>Pris: 50.000</p>
-			</div>
-			<div class="col-xs-3 col-sm-1 colorbox">
-				<button id="milkFrame" onClick="changeColor('Milk');colours();" class="color"><p>Milk</p></button>
-				<p>Pris: 50.000</p>
-			</div>
-			<div class="col-xs-3 col-sm-1 colorbox">
-				<button id="pepperFrame" onClick="changeColor('Pepper');colours();" class="color"><p>Pepper</p></button>
-				<p>Pris: 50.000</p>
-			</div>
-			<div class="col-xs-3 col-sm-1 colorbox">
-				<button id="submarineFrame" onClick="changeColor('Submarine');colours();" class="color"><p>Submarine</p></button>
-				<p>Pris: 50.000</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="whitespace"></div>
-	<br>
-	<div id="chooseAccessory">
-			<div class="row accessories">
-	
-				<label class="col-sm-4" >
-					<input class="check" value="convoybox" onClick="changeaccessory('-convoy-box.png');accessory();" type="checkbox" id="convoybox" />
-					<span class="seatButton">Convoy Box</span>
-				</label>
-	
-				<label class="col-sm-4">
-					<input class="check" value="plasticbox" onClick="changeaccessory('-plastic-box.png');accessory();" type="checkbox" id="plasticbox" />
-					<span class="seatButton">Plastic Box</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" value="alubox" onClick="changeaccessory('-alubox.png');accessory();" type="checkbox" id="alubox" />
-					<span class="seatButton">Alu Box</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" value="canopy" onClick="changeaccessory('-canopy.png');accessory();" type="checkbox" id="canopy" />
-					<span class="seatButton">Canopy</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" value="damperkit" type="checkbox" id="damperkit" onclick="accessory();" />
-					<span class="seatButton">Damper Kit</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" value="foldableseat" onClick="changeaccessory('-child-seat.png');accessory();" type="checkbox" id="foldableseat" />
-					<span class="seatButton">Foldable child seat</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" value="honeycompboard" type="checkbox" id="honeycompboard" onclick="accessory();" />
-					<span class="seatButton">Honeycomp Board</span>
-				</label>
-	
-				<!--BBX section-->
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-bbx-black.png');accessory();" value="bbx-black" type="checkbox" id="bbx" />
-					<span class="seatButton">BBX-Black</span>
-				</label>
-				
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-bbx-blue.png');accessory();" value="bbx-blue" type="checkbox" id="bbx" />
-					<span class="seatButton">BBX-Blue</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-bbx-green.png');accessory();" value="bbx-green" type="checkbox" id="bbx"  />
-					<span class="seatButton">BBX-Green</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-bbx-orange.png');accessory();" value="bbx-orange" type="checkbox" id="bbx"  />
-					<span class="seatButton">BBX-Orange</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-bbx-red.png');accessory();" value="bbx-red" type="checkbox" id="bbx"  />
-					<span class="seatButton">BBX-Red</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-bbx-white.png');accessory();" value="bbx-white" type="checkbox" id="bbx"  />
-					<span class="seatButton">BBX-White</span>
-				</label>
-	
-				<!--Billboard section-->
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-billboard-black.png');accessory();" value="billboard-black" type="checkbox" id="billboard"  />
-					<span class="seatButton">Billboard-Black</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-billboard-blue.png');accessory();" value="billboard-blue" type="checkbox" id="billboard"  />
-					<span class="seatButton">Billboard-Blue</span>
-				</label>
-			
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-billboard-green.png');accessory();" value="billboard-green" type="checkbox" id="billboard"  />
-					<span class="seatButton">Billboard-Green</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-billboard-dark-green.png');accessory();" value="billboard-dark-green" type="checkbox" id="billboard"  />
-					<span class="seatButton">Billboard-Dark Green</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-billboard-orange.png');accessory();" value="billboard-orange" type="checkbox" id="billboard"  />
-					<span class="seatButton">Billboard-Orange</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-billboard-red.png');accessory();" value="billboard-red" type="checkbox" id="billboard"  />
-					<span class="seatButton">Billboard-Red</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-billboard-white.png');accessory();" value="billboard-white" type="checkbox" id="billboard"  />
-					<span class="seatButton">Billboard-White</span>
-				</label>
-	
-				<label class="col-sm-4" >
-					<input class="check" onClick="changeaccessory('-billboard-yellow.png');accessory();" value="billboard-yellow" type="checkbox" id="billboard"  />
-					<span class="seatButton">Billboard-Yellow</span>
-				</label>	
-			</div>
-	</div>
-<br>
-	<div class="whitespace"></div>
-
-	<div id="showReceipt">
-		<div class="container receipt">
-			<p>Her er din kvittering</p>
-
-			<input id="inputBox" class="check" type="text" value="click a button">
-    		<div id="show"></div>
-		</div>
-	</div>
-</div>
 <script>
 
 //Update the image, so it shows the bike color, and the bike accessories.
@@ -246,9 +66,14 @@ function receipt() {
 
 $(document).ready(function() {
 	
-//Gets value of check box
-$('.check').on('change', function() {
-    $('#show').html(this.checked ? this.value : '');
+	$(document).ready(function(){
+    $checks = $(":checkbox");
+    $checks.on('change', function() {
+        var string = $checks.filter(":checked").map(function(i,v){
+            return this.value;
+        }).get().join(" ");
+        $('#show').val(string);
+    }).trigger('change');
 });
 
 //Gets value of all buttons
