@@ -45,10 +45,26 @@
   text-align: center;
   background-color: #a2a2a2;
 }
-.vælgfarve {
-  
+#status-color {
+  background-color: orangered;
+  width: 33.333333333333333333333333333333333333333333%;
+  float: left;
+  text-align: center;
 }
-.pris {
+#status-color button {
+  background-color: orangered;
+  border: none;
+}
+#status-accessory button {
+  background-color: #a2a2a2;
+  border: none;
+}
+#status-basket button {
+  background-color: #a2a2a2;
+  border: none;
+}
+
+.price {
   text-align: center;
 }
 .whitespace {
@@ -149,4 +165,11 @@
 .assebox {
   margin-bottom: 30px;
   width: 100%;
+}
+
+@media (min-width: 576px){
+  .col-sm-3{
+    max-width: none;
+  }
+  
 }

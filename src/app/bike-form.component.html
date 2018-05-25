@@ -4,14 +4,14 @@
     <img id="imageToSwap" src="./assets/images/Billeder til web/Cykel/Classic-frame.png" alt="Farve" class="frame">
 
     <div class="row statusbar">
-        <div class="col-sm-12 col-md-4 status vælgfarve">
-        <h2>1.Vælg Farve</h2>
+        <div class="col-sm-12 col-md-4 status" id="status-color">
+        <button id="color-button" onclick="colours()"><h2>1.Vælg Farve</h2></button>
         </div>
-        <div class="col-sm-12 col-md-4 status tilbehør">
-        <h2>2.Tilføj Tilbehør</h2>
+        <div class="col-sm-12 col-md-4 status" id="status-accessory">
+        <button id="accessory-button" onclick="accessory()"><h2>2.Tilføj Tilbehør</h2></button>
         </div>
-        <div class="col-sm-12 col-md-4 status kurv">
-        <h2>3.Kurv</h2>
+        <div class="col-sm-12 col-md-4 status" id="status-basket">
+        <button id="receipt-button" onclick="receipt()"><h2>3.Kurv</h2></button>
         </div>
     </div>
 
@@ -19,35 +19,35 @@
         <div class="row chosecolor">
             <div class="col-xs-3 col-sm-1 colorbox">
                 <button id="bluebirdFrame" onClick="changeColor('Bluebird');colours();" class="color"><p>Blue Bird</p></button>
-                <p>Pris: 50.000</p>
+                <p class="price">Pris: 50.000</p>
             </div>
             <div class="col-xs-3 col-sm-1 colorbox">
                 <button id="classicFrame" onClick="changeColor('Classic');colours();" class="color"><p>Classic</p></button>
-                <p class="pris">Pris: 50.000</p>
+                <p class="price">Pris: 50.000</p>
             </div>
             <div class="col-xs-3 col-sm-1 colorbox">
                 <button id="clockworkFrame" onClick="changeColor('Clockwork');colours();" class="color"><p>Clockwork</p></button>
-                <p class="pris">Pris: 50.000</p>
+                <p class="price">Pris: 50.000</p>
             </div>
             <div class="col-xs-3 col-sm-1 colorbox">
                 <button id="lizzardFrame" onClick="changeColor('Lizzard-king');colours();" class="color"><p>Lizzard</p></button>
-                <p class="pris">Pris: 50.000</p>
+                <p class="price">Pris: 50.000</p>
             </div>
             <div class="col-xs-3 col-sm-1 colorbox">
                 <button id="raceFrame" onClick="changeColor('Race');colours();" class="color"><p>Race</p></button>
-                <p class="pris">Pris: 50.000</p>
+                <p class="price">Pris: 50.000</p>
             </div>
             <div class="col-xs-3 col-sm-1 colorbox">
                 <button id="milkFrame" onClick="changeColor('Milk');colours();" class="color"><p>Milk</p></button>
-                <p class="pris">Pris: 50.000</p>
+                <p class="price">Pris: 50.000</p>
             </div>
             <div class="col-xs-3 col-sm-1 colorbox">
                 <button id="pepperFrame" onClick="changeColor('Pepper');colours();" class="color"><p>Pepper</p></button>
-                <p class="pris">Pris: 50.000</p>
+                <p class="price">Pris: 50.000</p>
             </div>
             <div class="col-xs-3 col-sm-1 colorbox">
                 <button id="submarineFrame" onClick="changeColor('Submarine');colours();" class="color"><p>Submarine</p></button>
-                <p class="pris">Pris: 50.000</p>
+                <p class="price">Pris: 50.000</p>
             </div>
         </div>
     </div>
