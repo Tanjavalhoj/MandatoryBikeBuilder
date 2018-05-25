@@ -18,12 +18,12 @@
 			<td>{{ bike.accessory }}</td>
 			<td>
 				<a [routerLink]="['/add', bike.$key]">
-					<i class="glyphicon glyphicon-edit"></i>
+					<span class="glyphicon glyphicon-edit" aria-hidden="true">Ændre</span>
 				</a>
 			</td>
 			<td>
 				<a>
-					<i (click)="delete(bike)" class="glyphicon glyphicon-remove"></i>
+					<span (click)="delete(bike)" class="glyphicon glyphicon-remove" aria-hidden="true">Slet</span>
 				</a>
 			</td>
 		</tr>
