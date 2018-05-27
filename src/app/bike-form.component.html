@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>E8000 BULLITT</h1>
+    <h1>{{title}}</h1>
     <img src="./assets/images/benches-environment-flower-983436.jpg" alt="park med en bænk" class="background">
     <img id="imageToSwap" src="./assets/images/Billeder til web/Cykel/Classic-frame.png" alt="Farve" class="frame">
 
@@ -182,7 +182,7 @@
                 formControlName="framecolor" value={{(item|async)?.framecolor}}>
                 <div *ngIf="form.controls.framecolor.touched && 
                 !form.controls.framecolor.valid" class="alert alert-danger">
-                framecolor is required
+                Cykel farve skal vælges
         </div>
     </div>
 
@@ -192,7 +192,7 @@
                 formControlName="accessory" value={{(item|async)?.accessory}}>
         <div *ngIf="form.controls.accessory.touched && 
                 !form.controls.accessory.valid" class="alert alert-danger">
-            accessory is required
+            tilbehør skal vælges
         </div>
     </div>
     

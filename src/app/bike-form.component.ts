@@ -31,10 +31,10 @@ export class BikeFormComponent  {
         });
 
         if (!this.id) {
-            this.title = 'New Bike';
+            this.title = 'Ny E8000 BULLITT';
         }
         else {
-            this.title = 'Edit Bike';
+            this.title = 'Ændre din E8000 BULLITT order';
             this.item = this.db.object(this.id);
         }
     }
